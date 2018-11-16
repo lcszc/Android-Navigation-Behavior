@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_nav_graph"
+    app:startDestination="@id/mainAccountFragment">
+
+    <fragment
+        android:id="@+id/mainAccountFragment"
+        android:name="co.lucasc.hoster.ui.account.AccountFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/actionOpenFirstAccountFragment"
+            app:launchSingleTop="false"
+            app:destination="@id/firstAccountFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstAccountFragment"
+        android:name="co.lucasc.hoster.ui.account.AccountFirstActionFragment"
+        android:label="Account First Action">
+
+        <action
+            android:id="@+id/actionOpenSecondAccountFragment"
+            app:destination="@id/secondAccountFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondAccountFragment"
+        android:name="co.lucasc.hoster.ui.account.AccountSecondActionFragment"
+        android:label="Account Second Action">
+
+        <action
+            android:id="@+id/openAccountThirdAction"
+            app:destination="@id/thirdAccountFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdAccountFragment"
+        android:name="co.lucasc.hoster.ui.account.AccountThirdActionFragment"
+        android:label="Account Second Action" />
+
+</navigation>

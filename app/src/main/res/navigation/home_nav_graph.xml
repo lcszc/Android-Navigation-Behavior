@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/navHomeFragment">
+
+    <fragment
+        android:id="@+id/navHomeFragment"
+        android:name="co.lucasc.hoster.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/openFirstActionFragment"
+            app:launchSingleTop="false"
+            app:destination="@id/homeFirstActionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFirstActionFragment"
+        android:name="co.lucasc.hoster.ui.home.HomeFirstActionFragment"
+        android:label="Home First Action">
+
+        <action
+            android:id="@+id/openHomeSecondAction"
+            app:destination="@id/homeSecondActionFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeSecondActionFragment"
+        android:name="co.lucasc.hoster.ui.home.HomeSecondActionFragment"
+        android:label="Home Second Action" />
+
+
+</navigation>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Hoster</string>
+    <string name="title_home">Home</string>
+    <string name="title_account">Account</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_first_action">Home first low-level action.</string>
+    <string name="text_second_action">Home second low-level action.</string>
+    <string name="text_first_action_data">First Action Data: %d</string>
+</resources>

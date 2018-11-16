@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_nav_graph"
+    app:startDestination="@id/settings">
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="co.lucasc.hoster.ui.settings.SettingsFragment"
+        android:label="@string/title_home">
+
+        <action
+            android:id="@+id/actionOpenFirstSettings"
+            app:destination="@id/firstSettings" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstSettings"
+        android:name="co.lucasc.hoster.ui.settings.FirstSettingsFragment"
+        android:label="Settings First Action">
+
+        <argument
+            android:name="@+id/quantityOfLove"
+            android:defaultValue="298"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/actionOpenSecondSettings"
+            app:destination="@id/secondSettings" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondSettings"
+        android:name="co.lucasc.hoster.ui.settings.SecondSettingsFragment"
+        android:label="Settings Second Action" />
+
+</navigation>
